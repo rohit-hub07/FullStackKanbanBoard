@@ -9,9 +9,7 @@ const port = process.env.PORT || 8080;
 dbConnection()
   .then(() => {
     app.listen(port, () =>{
-      `App is listening to port ${port}`
+      console.log(`App is listening to port ${port}`)
     });
   })
-  .catch((err) => {
-    console.log("Some error occured!");
-  });
+
