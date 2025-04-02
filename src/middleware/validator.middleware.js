@@ -3,7 +3,7 @@ import {ApiError} from "../utils/api-error.js"
 
 const validator = (req, res, next) => {
   const errors = validationResult(req)
-
+  console.log("In the validator folder: ", errors)
   if(errors.isEmpty()){
     return next()
   }
